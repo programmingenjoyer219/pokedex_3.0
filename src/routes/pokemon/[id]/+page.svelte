@@ -46,8 +46,8 @@
 			<!-- row-2 -->
 			<p>{description}</p>
 		</div>
+		<!-- col-2 -->
 		{#if base}
-			<!-- col-2 -->
 			<div class="p-4 space-y-4">
 				<h2 class="text-3xl font-semibold">{english}'s Stats:</h2>
 				<div class="flex flex-col items-stretch gap-2">
@@ -55,6 +55,13 @@
 						<PokemonStat {value} {index} />
 					{/each}
 				</div>
+			</div>
+		{:else}
+			<div class="p-4 space-y-4 flex flex-col justify-center">
+				<h2 class="text-3xl font-semibold text-center">
+					No information available
+				</h2>
+				<i class="ri-file-warning-fill text-5xl text-center"></i>
 			</div>
 		{/if}
 	</div>
